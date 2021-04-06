@@ -2,56 +2,40 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: '', // e.g: 'Name | Developer'
-  lang: '', // e.g: en, es, fr, jp
-  description: '', // e.g: Welcome to my website
+  title: 'Tommy Myers | Developer', // e.g: 'Name | Developer'
+  lang: 'en', // e.g: en, es, fr, jp
+  description: 'Info about Tommy Myers', // e.g: Welcome to my website
 };
 
 // HERO DATA
 export const heroData = {
   title: '',
-  name: '',
-  subtitle: '',
-  cta: '',
+  name: 'Tommy Myers',
+  subtitle: "I'm a software developer.",
+  cta: 'Learn more',
 };
 
 // ABOUT DATA
 export const aboutData = {
-  img: 'profile.jpg',
-  paragraphOne: '',
-  paragraphTwo: '',
-  paragraphThree: '',
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  img: 'profile.png',
+  paragraphOne:
+    'My love for coding started at a young age, first with iOS development, then learning Java to make Minecraft mods, Python for school projects, JavaScript/NodeJS to make web APIs, and a few other technologies.',
+  paragraphTwo: "I'm currently working as an RPA Developer at a consultancy.",
+  paragraphThree: ' ',
+  resume: '', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
+    img: 'tmod0.png',
+    title: 'tMod',
+    info:
+      'Utility mod for Minecraft that adds useful information to the HUD like the health of your armour and the remaining potion effect duration.',
     info2: '',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
-  },
-  {
-    id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
-  },
-  {
-    id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: 'https://github.com/tommymyers/tmod', // if no repo, the button will not show up
   },
 ];
 
@@ -59,7 +43,7 @@ export const projectsData = [
 export const contactData = {
   cta: '',
   btn: '',
-  email: '',
+  email: 'tommy@tommymyers.dev',
 };
 
 // FOOTER DATA
@@ -67,28 +51,18 @@ export const footerData = {
   networks: [
     {
       id: nanoid(),
-      name: 'twitter',
-      url: '',
-    },
-    {
-      id: nanoid(),
-      name: 'codepen',
-      url: '',
-    },
-    {
-      id: nanoid(),
       name: 'linkedin',
-      url: '',
+      url: 'https://linkedin.com/in/tommy-myers',
     },
     {
       id: nanoid(),
       name: 'github',
-      url: '',
+      url: 'https://github.com/tommymyers',
     },
   ],
 };
 
 // Github start/fork buttons
 export const githubButtons = {
-  isEnabled: true, // set to false to disable the GitHub stars/fork buttons
+  isEnabled: false, // set to false to disable the GitHub stars/fork buttons
 };
