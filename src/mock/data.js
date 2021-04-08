@@ -9,6 +9,7 @@ export const headData = {
 
 // HERO DATA
 export const heroData = {
+  img: 'profile.png',
   title: '',
   name: 'Tommy Myers',
   subtitle: "I'm a software developer.",
@@ -17,16 +18,25 @@ export const heroData = {
 
 // ABOUT DATA
 export const aboutData = {
-  img: 'profile.png',
   paragraphOne:
-    'My love for coding started at a young age, first with iOS development, then learning Java to make Minecraft mods, Python for school projects, JavaScript/NodeJS to make web APIs, and a few other technologies.',
-  paragraphTwo: "I'm currently working as an RPA Developer at a consultancy.",
+    'My love for coding started at a young age, first with iOS development, then learning Java to make Minecraft mods, Python for school projects, JavaScript/NodeJS to make web APIs, Arduino/embedded projects and a few other technologies.',
+  paragraphTwo: "I'm currently working as an RPA Developer/Consultant at a consultancy.",
   paragraphThree: ' ',
   resume: '', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
 export const projectsData = [
+  {
+    id: nanoid(),
+    img: 'youtube-channel.png',
+    title: 'iPhoneSDKDeveloper Channel',
+    info:
+      "YouTube channel I created when I was 9. It was about iOS Development tutorials and there's currently 38 videos accumulating almost 75,000 views. Most of the videos were about solutions to problems that I encountered. It was a sort of log book to my growth as a young iOS developer.",
+    info2: '',
+    url: 'https://www.youtube.com/user/iPhoneSDKDeveloper',
+    repo: '', // if no repo, the button will not show up
+  },
   {
     id: nanoid(),
     img: 'tmod0.png',
