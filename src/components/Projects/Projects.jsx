@@ -6,6 +6,9 @@ import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
 
+const ConditionalWrapper = ({ condition, wrapper, children }) =>
+  condition ? wrapper(children) : children;
+
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
 
@@ -66,7 +69,7 @@ const Projects = () => {
                           className="cta-btn text-color-main"
                           href={repo}
                         >
-                          GitHub
+                          Source
                         </a>
                       )}
                     </div>
@@ -81,23 +84,37 @@ const Projects = () => {
                     distance="30px"
                   >
                     <div className="project-wrapper__image">
-                      <Tilt
-                        options={{
-                          reverse: true,
-                          max: 8,
-                          perspective: 1000,
-                          scale: 1,
-                          speed: 300,
-                          transition: true,
-                          axis: null,
-                          reset: true,
-                          easing: 'cubic-bezier(.03,.98,.52,.99)',
-                        }}
+                      <ConditionalWrapper
+                        condition={url}
+                        wrapper={(children) => (
+                          <a
+                            href={url}
+                            target="_blank"
+                            aria-label="Project Link"
+                            rel="noopener noreferrer"
+                          >
+                            {children}
+                          </a>
+                        )}
                       >
-                        <div data-tilt className="thumbnail rounded">
-                          <ProjectImg alt={title} filename={img} />
-                        </div>
-                      </Tilt>
+                        <Tilt
+                          options={{
+                            reverse: true,
+                            max: 8,
+                            perspective: 1000,
+                            scale: 1,
+                            speed: 300,
+                            transition: true,
+                            axis: null,
+                            reset: true,
+                            easing: 'cubic-bezier(.03,.98,.52,.99)',
+                          }}
+                        >
+                          <div data-tilt className="thumbnail rounded">
+                            <ProjectImg alt={title} filename={img} />
+                          </div>
+                        </Tilt>
+                      </ConditionalWrapper>
                     </div>
                   </Fade>
                 </Col>
